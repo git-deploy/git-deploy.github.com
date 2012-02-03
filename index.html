@@ -262,6 +262,44 @@ $ git-deploy status
       </article>
 
       <article>
+        <h3>Step 4: <i>panic</i></h3>
+
+        <q>OMGWTFBBQ we're spewing errors</q>
+
+      </article>
+
+      <article class='smaller'>
+        <h3>
+          git-deploy revert -- re-sync out a previous version
+        </h3>
+        <pre>
+$ git-deploy revert
+# INFO : Starting step 'revert' at 2012-02-03 12-09-50
+# INFO : Working directory was checked out to tag 'frob-20120203-111220', will restore this tag on abort
+# INFO : 
+The following commits are available to revert the site to:
+# INFO : Filtering list by m/^frob/ (use `git-deploytool show .` to see all).
+# INFO : SHA1........  tag: PREFIX-YYYYMMDD-HHMM == Original rollout of same sha1
+# INFO : Tags against active commit are marked with a '*' and are highlighted differently
+   1.   ac6152d369 *tag: frob-20120203-111220       ==     office-20120203-110941
+   2.   639022c78d  tag: frob-20120202-160118      
+   3.   fc29e97c43  tag: frob-20120202-132719      
+   4.   77b932ea11  tag: frob-20120201-164625      
+   5.   f2ffb24388  tag: frob-20120201-163350       ==     book-20120201-162541
+   6.   a7bf6eb7c8  tag: frob-20120201-140814      
+   7.   ee728fa093  tag: frob-20120201-110816       ==     frob-20120131-145422     frob-20120131-121103     frob-20120130-171544     frob-20120130-121126
+   8.   cb3189bf21  tag: frob-20120201-105349       ==     admin-20120201-103938
+   9.   ee728fa093  tag: frob-20120131-145422       ==     frob-20120131-121103     frob-20120130-171544     frob-20120130-121126
+  10.   e987ca15e1  tag: frob-20120131-143318      
+# INFO : Showing first 10, <bignum> of <bignum> not shown (111 filtered). Use --count=N or different filter to show more (N=0 shows all)
+Please select a commit from 1-10 to revert to, or 'quit' to not do anything: quit
+</pre>
+
+      </article>
+
+      
+
+      <article>
         <h3>
           Why use it?
         </h3>
